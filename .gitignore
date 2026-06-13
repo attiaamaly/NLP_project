@@ -23,3 +23,6 @@ evaluation/figures/
 
 # VS Code
 .vscode/
+
+bm25_index.pkl
+
