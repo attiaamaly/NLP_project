@@ -1,0 +1,155 @@
+{
+  "section_1_overall_metrics": {
+    "description": "Aggregate evaluation results across all 35 benchmark questions.",
+    "total_questions": 35,
+    "in_scope_questions": 30,
+    "out_of_scope_questions": 5,
+    "search_success_rate": "100.0%",
+    "chat_success_rate": "100.0%",
+    "hit_at_1": "80.0%",
+    "hit_at_5": "90.0%",
+    "refusal_accuracy": "60.0%",
+    "source_match_rate": "90.0%"
+  },
+  "section_2_per_category_metrics": {
+    "description": "Retrieval performance broken down by document category.",
+    "categories": {
+      "Acronym": {
+        "count": 5,
+        "hit_at_1": "100.0%",
+        "hit_at_5": "100.0%",
+        "source_match_rate": "100.0%"
+      },
+      "Ambiguous": {
+        "count": 4,
+        "hit_at_1": "75.0%",
+        "hit_at_5": "100.0%",
+        "source_match_rate": "100.0%"
+      },
+      "Exact": {
+        "count": 8,
+        "hit_at_1": "100.0%",
+        "hit_at_5": "100.0%",
+        "source_match_rate": "100.0%"
+      },
+      "Reasoning": {
+        "count": 5,
+        "hit_at_1": "60.0%",
+        "hit_at_5": "60.0%",
+        "source_match_rate": "60.0%"
+      },
+      "Semantic": {
+        "count": 8,
+        "hit_at_1": "62.5%",
+        "hit_at_5": "87.5%",
+        "source_match_rate": "87.5%"
+      }
+    }
+  },
+  "section_3_top_failures": {
+    "description": "Questions where retrieval or generation failed, with classified error types.",
+    "failures": [
+      {
+        "question_id": 9,
+        "question": "Can I work from Spain for two months?",
+        "expected_document": "HR_Remote_Work_Policy",
+        "retrieved_document": "Finance_Travel_Policy.pdf",
+        "category": "Semantic",
+        "error_category": "Semantic Mismatch",
+        "refused": false,
+        "answer_preview": "Based on Finance_Travel_Policy.pdf, Travel Policy Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Booking \u2022 Use the approved booking tool when available. \u2022 Book economy class for flights under 6 hours"
+      },
+      {
+        "question_id": 12,
+        "question": "Can my vacation request be rejected?",
+        "expected_document": "HR_Leave_and_Absence_Policy",
+        "retrieved_document": "Compliance_Anti_Bribery_Policy.pdf",
+        "category": "Semantic",
+        "error_category": "Retrieval Failure",
+        "refused": false,
+        "answer_preview": "Based on Compliance_Anti_Bribery_Policy.pdf, AntiIBribery & Corruption Policy Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Policy Employees must not offer, promise, give, or accept bribes. 2. Gifts"
+      },
+      {
+        "question_id": 13,
+        "question": "What should I do before signing with a new supplier?",
+        "expected_document": "Finance_Vendor_Onboarding",
+        "retrieved_document": "Finance_Procurement_Policy.pdf",
+        "category": "Semantic",
+        "error_category": "Semantic Mismatch",
+        "refused": false,
+        "answer_preview": "Based on Finance_Procurement_Policy.pdf, Procurement Policy Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Overview This policy describes purchasing thresholds, approvals, and vendor selection. 2. Th"
+      },
+      {
+        "question_id": 22,
+        "question": "I want to spend \u20ac6000. Who must approve it?",
+        "expected_document": "Finance_Approval_Matrix + Finance_Procurement_Policy",
+        "retrieved_document": "Finance_Approval_Matrix.pdf",
+        "category": "Reasoning",
+        "error_category": "Retrieval Failure",
+        "refused": false,
+        "answer_preview": "Based on Finance_Approval_Matrix.pdf, Approval Matrix Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Summary This document summarizes who can approve which categories of spend and access. 2. Spend \u2022 "
+      },
+      {
+        "question_id": 26,
+        "question": "What happens after a major incident occurs?",
+        "expected_document": "Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines",
+        "retrieved_document": "Security_Incident_Response_Playbook.pdf",
+        "category": "Reasoning",
+        "error_category": "Retrieval Failure",
+        "refused": false,
+        "answer_preview": "Based on Security_Incident_Response_Playbook.pdf, Incident Response Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Severity Incidents are classified from SEVI1 to SEVI4 based on customer imp"
+      },
+      {
+        "question_id": 30,
+        "question": "What should I do when reporting concerns?",
+        "expected_document": "HR_Code_of_Conduct",
+        "retrieved_document": "Security_Incident_Response_Playbook.pdf",
+        "category": "Ambiguous",
+        "error_category": "Semantic Mismatch",
+        "refused": false,
+        "answer_preview": "Based on Security_Incident_Response_Playbook.pdf, Incident Response Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Severity Incidents are classified from SEVI1 to SEVI4 based on customer imp"
+      },
+      {
+        "question_id": 34,
+        "question": "What is OpenAI's valuation?",
+        "expected_document": "REFUSE",
+        "retrieved_document": "Eng_Architecture_Overview.pdf",
+        "category": "Refusal",
+        "error_category": "Refusal Failure",
+        "refused": false,
+        "answer_preview": "Based on Eng_Architecture_Overview.pdf, Engineering Architecture Overview Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Systems Our platform is composed of services for ingestion, indexing, retrieva"
+      },
+      {
+        "question_id": 35,
+        "question": "What will our revenue be next year?",
+        "expected_document": "REFUSE",
+        "retrieved_document": "Finance_Budgeting_Playbook.pdf",
+        "category": "Refusal",
+        "error_category": "Refusal Failure",
+        "refused": false,
+        "answer_preview": "Based on Finance_Budgeting_Playbook.pdf, Budgeting Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Cycle Budget planning runs quarterly with an annual reset. Departments submit forecasted spe"
+      }
+    ],
+    "total_failures": 8
+  },
+  "section_4_retrieval_comparison": {
+    "description": "BM25 keyword baseline vs FastEmbed dense retrieval comparison.",
+    "bm25_hit_at_1": "66.7%",
+    "dense_hit_at_1": "80.0%",
+    "bm25_hit_at_5": "86.7%",
+    "dense_hit_at_5": "90.0%",
+    "dense_wins": 5,
+    "bm25_wins": 1,
+    "both_win": 19,
+    "neither_wins": 5
+  },
+  "section_5_error_distribution": {
+    "description": "Distribution of failure types across all evaluated questions.",
+    "distribution": {
+      "Correct": 27,
+      "Semantic Mismatch": 3,
+      "Retrieval Failure": 3,
+      "Refusal Failure": 2
+    }
+  }
+}

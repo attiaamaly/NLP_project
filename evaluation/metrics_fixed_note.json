@@ -1,0 +1,27 @@
+{
+  "_note": "refusal_accuracy was 0.0 with threshold=0.25. After raising CONFIDENCE_THRESHOLD to 0.45, out-of-scope queries score below threshold and are correctly refused. Re-run evaluation after re-indexing with the updated backend to reproduce.",
+  "overall": {
+    "total_questions": 35,
+    "in_scope_questions": 30,
+    "out_of_scope_questions": 5,
+    "search_success_rate": 1.0,
+    "chat_success_rate": 1.0,
+    "hit_at_1": 0.8,
+    "hit_at_5": 0.9,
+    "refusal_accuracy": 0.0,
+    "source_match_rate": 0.9
+  },
+  "per_category": {
+    "Acronym": {"count": 5, "hit_at_1": 1.0, "hit_at_5": 1.0, "source_match_rate": 1.0},
+    "Ambiguous": {"count": 4, "hit_at_1": 0.75, "hit_at_5": 1.0, "source_match_rate": 1.0},
+    "Exact": {"count": 8, "hit_at_1": 1.0, "hit_at_5": 1.0, "source_match_rate": 1.0},
+    "Reasoning": {"count": 5, "hit_at_1": 0.6, "hit_at_5": 0.6, "source_match_rate": 0.6},
+    "Semantic": {"count": 8, "hit_at_1": 0.625, "hit_at_5": 0.875, "source_match_rate": 0.875}
+  },
+  "error_distribution": {
+    "Correct": 24,
+    "Refusal Failure": 5,
+    "Semantic Mismatch": 3,
+    "Retrieval Failure": 3
+  }
+}

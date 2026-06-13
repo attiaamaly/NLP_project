@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# Qdrant
+qdrant_storage/
+
+# Generated evaluation outputs
+evaluation/figures/
+
+# VS Code
+.vscode/

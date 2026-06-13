@@ -1,0 +1,61 @@
+{
+  "overall": {
+    "total_questions": 35,
+    "in_scope_questions": 30,
+    "out_of_scope_questions": 5,
+    "search_success_rate": 1.0,
+    "chat_success_rate": 1.0,
+    "hit_at_1": 0.8,
+    "hit_at_5": 0.9,
+    "refusal_accuracy": 0.6,
+    "source_match_rate": 0.9
+  },
+  "per_category": {
+    "Acronym": {
+      "count": 5,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "source_match_rate": 1.0
+    },
+    "Ambiguous": {
+      "count": 4,
+      "hit_at_1": 0.75,
+      "hit_at_5": 1.0,
+      "source_match_rate": 1.0
+    },
+    "Exact": {
+      "count": 8,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "source_match_rate": 1.0
+    },
+    "Reasoning": {
+      "count": 5,
+      "hit_at_1": 0.6,
+      "hit_at_5": 0.6,
+      "source_match_rate": 0.6
+    },
+    "Semantic": {
+      "count": 8,
+      "hit_at_1": 0.625,
+      "hit_at_5": 0.875,
+      "source_match_rate": 0.875
+    }
+  },
+  "error_distribution": {
+    "Correct": 27,
+    "Semantic Mismatch": 3,
+    "Retrieval Failure": 3,
+    "Refusal Failure": 2
+  },
+  "retrieval_comparison": {
+    "bm25_hit_at_1": 0.6667,
+    "dense_hit_at_1": 0.8,
+    "bm25_hit_at_5": 0.8667,
+    "dense_hit_at_5": 0.9,
+    "dense_wins": 5,
+    "bm25_wins": 1,
+    "both_win": 19,
+    "neither_wins": 5
+  }
+}

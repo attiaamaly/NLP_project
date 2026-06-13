@@ -1,0 +1,36 @@
+question_id,question,category,expected_document,expected_answer_contains,is_out_of_scope
+1,What is the meal reimbursement limit for lunch?,Exact,Finance_Expenses_Policy,25€ lunch cap,False
+2,What is the meal reimbursement limit for dinner?,Exact,Finance_Expenses_Policy,35€ dinner cap,False
+3,How long do employees have to submit expenses?,Exact,Finance_Expenses_Policy,30 days,False
+4,What is the default per diem amount?,Exact,Finance_Travel_Policy,45€ per day,False
+5,How often are invoices processed?,Exact,Finance_Invoice_Processing_SOP,Twice weekly,False
+6,How long are customer contracts retained?,Exact,Legal_Data_Retention_Policy,7 years after contract end,False
+7,How long are security logs retained?,Exact,Legal_Data_Retention_Policy,12 months,False
+8,How often are performance reviews conducted?,Exact,HR_Performance_Review_Guidelines,Twice per year,False
+9,Can I work from Spain for two months?,Semantic,HR_Remote_Work_Policy,Up to 60 consecutive days abroad,False
+10,Who needs to approve my overseas remote work request?,Semantic,HR_Remote_Work_Policy,Manager approval and compliance confirmation,False
+11,How much can I spend on lunch during a work trip?,Semantic,Finance_Expenses_Policy,25€ lunch cap,False
+12,Can my vacation request be rejected?,Semantic,HR_Leave_and_Absence_Policy,Managers may deny PTO during critical coverage periods,False
+13,What should I do before signing with a new supplier?,Semantic,Finance_Vendor_Onboarding,Complete vendor onboarding process and security checks,False
+14,How should contractors protect company information?,Semantic,HR_Contractor_Policy,Sign NDA and follow data classification rules,False
+15,What happens when my contractor agreement ends?,Semantic,HR_Contractor_Policy,Access revoked within 24 hours,False
+16,What information must I provide for international remote work?,Semantic,HR_Remote_Work_Policy,"Destination country, dates, and connectivity backup plan",False
+17,What are the MFA requirements?,Acronym,Security_Password_and_MFA_Policy,MFA required for accounts accessing production data or admin panels,False
+18,What does GDPR say about sharing employee data?,Acronym,Legal_GDPR_Employee_Data_Guide,Documented purpose and authorized audience required,False
+19,How do I request PTO?,Acronym,HR_Leave_and_Absence_Policy,Request through the HR system,False
+20,When is a PO number required?,Acronym,Finance_Invoice_Processing_SOP,Invoices should include PO number when applicable,False
+21,What is the SLA for a P1 issue?,Acronym,Support_SLAs_and_Escalation,First response within 1 hour,False
+22,I want to spend €6000. Who must approve it?,Reasoning,Finance_Approval_Matrix + Finance_Procurement_Policy,VP/Finance approval and Finance + Legal review,False
+23,Can a contractor keep system access after the contract ends?,Reasoning,HR_Contractor_Policy,"No, access is revoked within 24 hours",False
+24,What approvals are needed for administrative access costing €300?,Reasoning,Finance_Approval_Matrix,Security approval required regardless of spend,False
+25,Can I work abroad if I submit the request 2 days before leaving?,Reasoning,HR_Remote_Work_Policy,"No, requests must be submitted at least 10 business days in advance",False
+26,What happens after a major incident occurs?,Reasoning,Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines,Postmortem within 5 business days and remediation tracking,False
+27,How do I request leave?,Ambiguous,HR_Leave_and_Absence_Policy,PTO and leave request process,False
+28,What access should contractors receive?,Ambiguous,HR_Contractor_Policy,Least-privilege access,False
+29,How should employee information be handled?,Ambiguous,Legal_GDPR_Employee_Data_Guide,Authorized audience and documented purpose,False
+30,What should I do when reporting concerns?,Ambiguous,HR_Code_of_Conduct,Use the confidential reporting channel,False
+31,What is today's weather?,Refusal,REFUSE,Question outside knowledge base,True
+32,Should I buy Tesla stock?,Refusal,REFUSE,Question outside knowledge base,True
+33,Who won the World Cup?,Refusal,REFUSE,Question outside knowledge base,True
+34,What is OpenAI's valuation?,Refusal,REFUSE,Question outside knowledge base,True
+35,What will our revenue be next year?,Refusal,REFUSE,Information not contained in corpus,True
