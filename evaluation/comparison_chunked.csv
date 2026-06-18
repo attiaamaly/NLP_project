@@ -1,0 +1,31 @@
+question_id,expected_document,bm25_chunk_top1,bm25_chunk_hit_at_1,bm25_chunk_hit_at_5,dense_hit_at_1,dense_hit_at_5
+1,Finance_Expenses_Policy,Finance_Expenses_Policy.pdf,True,True,True,True
+2,Finance_Expenses_Policy,Finance_Expenses_Policy.pdf,True,True,True,True
+3,Finance_Expenses_Policy,Finance_Expenses_Policy.pdf,True,True,True,True
+4,Finance_Travel_Policy,Finance_Travel_Policy.pdf,True,True,True,True
+5,Finance_Invoice_Processing_SOP,Finance_Invoice_Processing_SOP.pdf,True,True,True,True
+6,Legal_Data_Retention_Policy,Legal_Data_Retention_Policy.pdf,True,True,True,True
+7,Legal_Data_Retention_Policy,Eng_Logging_and_Monitoring_Standard.pdf,False,True,True,True
+8,HR_Performance_Review_Guidelines,Security_Access_Control_Policy.pdf,False,True,True,True
+9,HR_Remote_Work_Policy,Legal_Data_Retention_Policy.pdf,False,True,False,True
+10,HR_Remote_Work_Policy,HR_Remote_Work_Policy.pdf,True,True,True,True
+11,Finance_Expenses_Policy,Finance_Approval_Matrix.pdf,False,True,True,True
+12,HR_Leave_and_Absence_Policy,Finance_Expenses_Policy.pdf,False,False,False,False
+13,Finance_Vendor_Onboarding,HR_Contractor_Policy.pdf,False,False,False,True
+14,HR_Contractor_Policy,HR_Code_of_Conduct.pdf,False,True,True,True
+15,HR_Contractor_Policy,HR_Contractor_Policy.pdf,True,True,True,True
+16,HR_Remote_Work_Policy,HR_Remote_Work_Policy.pdf,True,True,True,True
+17,Security_Password_and_MFA_Policy,Security_Password_and_MFA_Policy.pdf,True,True,True,True
+18,Legal_GDPR_Employee_Data_Guide,Legal_GDPR_Employee_Data_Guide.pdf,True,True,True,True
+19,HR_Leave_and_Absence_Policy,HR_Leave_and_Absence_Policy.pdf,True,True,True,True
+20,Finance_Invoice_Processing_SOP,Finance_Invoice_Processing_SOP.pdf,True,True,True,True
+21,Support_SLAs_and_Escalation,Support_SLAs_and_Escalation.pdf,True,True,True,True
+22,Finance_Approval_Matrix + Finance_Procurement_Policy,Finance_Approval_Matrix.pdf,True,True,True,True
+23,HR_Contractor_Policy,HR_Contractor_Policy.pdf,True,True,True,True
+24,Finance_Approval_Matrix,Finance_Approval_Matrix.pdf,True,True,True,True
+25,HR_Remote_Work_Policy,HR_Remote_Work_Policy.pdf,True,True,True,True
+26,Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines,Security_Incident_Response_Playbook.pdf,True,True,True,True
+27,HR_Leave_and_Absence_Policy,HR_Leave_and_Absence_Policy.pdf,True,True,True,True
+28,HR_Contractor_Policy,HR_Contractor_Policy.pdf,True,True,True,True
+29,Legal_GDPR_Employee_Data_Guide,Security_Data_Classification_Standard.pdf,False,True,True,True
+30,HR_Code_of_Conduct,HR_Code_of_Conduct.pdf,True,True,False,True
