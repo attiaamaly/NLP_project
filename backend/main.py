@@ -135,13 +135,12 @@ def embed(text: str) -> list[float]:
 
 def qdrant_search(query: str, top_k: int) -> list[ScoredPoint]:
     vec = embed(query)
-    response = qdrant.query_points(
+    return qdrant.search(
         collection_name=COLLECTION,
-        query=vec,
+        query_vector=vec,
         limit=top_k,
         with_payload=True,
     )
-    return response.points
 
 
 def build_context(hits: list[ScoredPoint]) -> str:

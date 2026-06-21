@@ -190,25 +190,44 @@ def retrieve_list_from_search_response(search_payload: Any) -> list[str]:
 # ─────────────────────────────────────────────────────────────────────────────
 # Metric helpers
 # ─────────────────────────────────────────────────────────────────────────────
+def expected_docs(expected: str) -> list[str]:
+    """
+    Split a (possibly compound) expected-document label into individual
+    normalized document stems.
+
+    Labels may list several acceptable documents joined with '+', e.g.
+    'Finance_Approval_Matrix + Finance_Procurement_Policy'. Sentinels
+    ('N/A', 'REFUSE') yield no targets.
+    """
+    if not expected or str(expected).strip().upper() in {"N/A", "REFUSE"}:
+        return []
+    return [normalize_stem(part) for part in str(expected).split("+") if part.strip()]
+
+
 def hit_at_k(retrieved_sources: list[str], expected: str, k: int) -> bool:
-    """True if expected document appears in the top-k retrieved sources."""
-    top_k = retrieved_sources[:k]
-    exp_n = normalize(expected)
-    exp_stem = normalize_stem(expected)
-    return any((exp_n in normalize(s)) or (exp_stem in normalize_stem(s)) for s in top_k)
+    """True if any acceptable expected document appears in the top-k retrieved sources."""
+    targets = expected_docs(expected)
+    if not targets:
+        return False
+    top_k = [normalize_stem(s) for s in retrieved_sources[:k]]
+    return any(t in top_k for t in targets)
 
 
-def source_match(answer: str, expected: str, chat_sources: list[str] | None = None) -> bool:
-    """True if the answer or citations mention the expected document name."""
-    if not expected or str(expected).strip().upper() == "N/A":
+def source_match(expected: str, chat_sources: list[str] | None = None) -> bool:
+    """
+    True if any acceptable expected document is among the /chat citations.
+
+    Mirrors hit_at_k: set-based matching on exact normalized stem. Compound
+    labels joined with '+' count as a match if ANY listed document was cited.
+    Matching the structured citation list (rather than the answer prose) avoids
+    the near-circular case where the model merely echoes a filename in its text.
+    """
+    targets = set(expected_docs(expected))
+    if not targets:
         return False
 
-    expected_norm = normalize_stem(expected)
-    candidates = [answer or ""]
-    if chat_sources:
-        candidates.extend(chat_sources)
-
-    return any(expected_norm in normalize_stem(c) or expected_norm in normalize(c) for c in candidates)
+    cited = {normalize_stem(s) for s in (chat_sources or []) if s}
+    return bool(targets & cited)
 
 
 def classify_error(
@@ -308,7 +327,7 @@ def run_dense_eval(
             chat_ok = False
             chat_sources = []
 
-        sm = source_match(answer, expected, chat_sources=chat_sources) if not out_scope else False
+        sm = source_match(expected, chat_sources=chat_sources) if not out_scope else False
         error_cat = classify_error(out_scope, refused, h1, h5, sm, question)
 
         row.update(

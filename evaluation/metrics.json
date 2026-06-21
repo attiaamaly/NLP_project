@@ -5,10 +5,10 @@
     "out_of_scope_questions": 5,
     "search_success_rate": 1.0,
     "chat_success_rate": 1.0,
-    "hit_at_1": 0.8,
-    "hit_at_5": 0.9,
-    "refusal_accuracy": 0.6,
-    "source_match_rate": 0.9
+    "hit_at_1": 0.8667,
+    "hit_at_5": 0.9667,
+    "refusal_accuracy": 0.4,
+    "source_match_rate": 0.9667
   },
   "per_category": {
     "Acronym": {
@@ -31,9 +31,9 @@
     },
     "Reasoning": {
       "count": 5,
-      "hit_at_1": 0.6,
-      "hit_at_5": 0.6,
-      "source_match_rate": 0.6
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "source_match_rate": 1.0
     },
     "Semantic": {
       "count": 8,
@@ -43,19 +43,19 @@
     }
   },
   "error_distribution": {
-    "Correct": 27,
+    "Correct": 28,
     "Semantic Mismatch": 3,
-    "Retrieval Failure": 3,
-    "Refusal Failure": 2
+    "Refusal Failure": 3,
+    "Retrieval Failure": 1
   },
   "retrieval_comparison": {
-    "bm25_hit_at_1": 0.6667,
-    "dense_hit_at_1": 0.8,
-    "bm25_hit_at_5": 0.8667,
-    "dense_hit_at_5": 0.9,
+    "bm25_hit_at_1": 0.7333,
+    "dense_hit_at_1": 0.8667,
+    "bm25_hit_at_5": 0.9333,
+    "dense_hit_at_5": 0.9667,
     "dense_wins": 5,
     "bm25_wins": 1,
-    "both_win": 19,
-    "neither_wins": 5
+    "both_win": 21,
+    "neither_wins": 3
   }
 }

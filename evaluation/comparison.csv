@@ -20,11 +20,11 @@ question_id,question,expected_document,bm25_top1,dense_top1,bm25_hit_at_1,dense_
 19,How do I request PTO?,HR_Leave_and_Absence_Policy,HR_Leave_and_Absence_Policy.pdf,HR_Leave_and_Absence_Policy.pdf,True,True,True,True,Both
 20,When is a PO number required?,Finance_Invoice_Processing_SOP,Finance_Invoice_Processing_SOP.pdf,Finance_Invoice_Processing_SOP.pdf,True,True,True,True,Both
 21,What is the SLA for a P1 issue?,Support_SLAs_and_Escalation,Support_SLAs_and_Escalation.pdf,Support_SLAs_and_Escalation.pdf,True,True,True,True,Both
-22,I want to spend €6000. Who must approve it?,Finance_Approval_Matrix + Finance_Procurement_Policy,Finance_Approval_Matrix.pdf,Finance_Approval_Matrix.pdf,False,False,False,False,Neither
+22,I want to spend €6000. Who must approve it?,Finance_Approval_Matrix + Finance_Procurement_Policy,Finance_Approval_Matrix.pdf,Finance_Approval_Matrix.pdf,True,True,True,True,Both
 23,Can a contractor keep system access after the contract ends?,HR_Contractor_Policy,HR_Contractor_Policy.pdf,HR_Contractor_Policy.pdf,True,True,True,True,Both
 24,What approvals are needed for administrative access costing €300?,Finance_Approval_Matrix,Finance_Approval_Matrix.pdf,Finance_Approval_Matrix.pdf,True,True,True,True,Both
 25,Can I work abroad if I submit the request 2 days before leaving?,HR_Remote_Work_Policy,HR_Remote_Work_Policy.pdf,HR_Remote_Work_Policy.pdf,True,True,True,True,Both
-26,What happens after a major incident occurs?,Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines,Security_Incident_Response_Playbook.pdf,Security_Incident_Response_Playbook.pdf,False,False,False,False,Neither
+26,What happens after a major incident occurs?,Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines,Security_Incident_Response_Playbook.pdf,Security_Incident_Response_Playbook.pdf,True,True,True,True,Both
 27,How do I request leave?,HR_Leave_and_Absence_Policy,HR_Leave_and_Absence_Policy.pdf,HR_Leave_and_Absence_Policy.pdf,True,True,True,True,Both
 28,What access should contractors receive?,HR_Contractor_Policy,HR_Contractor_Policy.pdf,HR_Contractor_Policy.pdf,True,True,True,True,Both
 29,How should employee information be handled?,Legal_GDPR_Employee_Data_Guide,Security_Data_Classification_Standard.pdf,Legal_GDPR_Employee_Data_Guide.pdf,False,True,True,True,Dense

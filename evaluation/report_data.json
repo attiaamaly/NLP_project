@@ -6,10 +6,10 @@
     "out_of_scope_questions": 5,
     "search_success_rate": "100.0%",
     "chat_success_rate": "100.0%",
-    "hit_at_1": "80.0%",
-    "hit_at_5": "90.0%",
-    "refusal_accuracy": "60.0%",
-    "source_match_rate": "90.0%"
+    "hit_at_1": "86.7%",
+    "hit_at_5": "96.7%",
+    "refusal_accuracy": "40.0%",
+    "source_match_rate": "96.7%"
   },
   "section_2_per_category_metrics": {
     "description": "Retrieval performance broken down by document category.",
@@ -34,9 +34,9 @@
       },
       "Reasoning": {
         "count": 5,
-        "hit_at_1": "60.0%",
-        "hit_at_5": "60.0%",
-        "source_match_rate": "60.0%"
+        "hit_at_1": "100.0%",
+        "hit_at_5": "100.0%",
+        "source_match_rate": "100.0%"
       },
       "Semantic": {
         "count": 8,
@@ -80,26 +80,6 @@
         "answer_preview": "Based on Finance_Procurement_Policy.pdf, Procurement Policy Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Overview This policy describes purchasing thresholds, approvals, and vendor selection. 2. Th"
       },
       {
-        "question_id": 22,
-        "question": "I want to spend \u20ac6000. Who must approve it?",
-        "expected_document": "Finance_Approval_Matrix + Finance_Procurement_Policy",
-        "retrieved_document": "Finance_Approval_Matrix.pdf",
-        "category": "Reasoning",
-        "error_category": "Retrieval Failure",
-        "refused": false,
-        "answer_preview": "Based on Finance_Approval_Matrix.pdf, Approval Matrix Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Summary This document summarizes who can approve which categories of spend and access. 2. Spend \u2022 "
-      },
-      {
-        "question_id": 26,
-        "question": "What happens after a major incident occurs?",
-        "expected_document": "Security_Incident_Response_Playbook + Postmortem_Template_and_Guidelines",
-        "retrieved_document": "Security_Incident_Response_Playbook.pdf",
-        "category": "Reasoning",
-        "error_category": "Retrieval Failure",
-        "refused": false,
-        "answer_preview": "Based on Security_Incident_Response_Playbook.pdf, Incident Response Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Severity Incidents are classified from SEVI1 to SEVI4 based on customer imp"
-      },
-      {
         "question_id": 30,
         "question": "What should I do when reporting concerns?",
         "expected_document": "HR_Code_of_Conduct",
@@ -108,6 +88,16 @@
         "error_category": "Semantic Mismatch",
         "refused": false,
         "answer_preview": "Based on Security_Incident_Response_Playbook.pdf, Incident Response Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Severity Incidents are classified from SEVI1 to SEVI4 based on customer imp"
+      },
+      {
+        "question_id": 32,
+        "question": "Should I buy Tesla stock?",
+        "expected_document": "REFUSE",
+        "retrieved_document": "Support_Triage_Playbook.pdf",
+        "category": "Refusal",
+        "error_category": "Refusal Failure",
+        "refused": false,
+        "answer_preview": "Based on Support_Triage_Playbook.pdf, Support Triage Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Intake All tickets must include customer, issue summary, and reproduction steps. 2. Priori"
       },
       {
         "question_id": 34,
@@ -130,26 +120,26 @@
         "answer_preview": "Based on Finance_Budgeting_Playbook.pdf, Budgeting Playbook Internal document \u2022 Version 1.0 \u2022 2026-02-04 1. Cycle Budget planning runs quarterly with an annual reset. Departments submit forecasted spe"
       }
     ],
-    "total_failures": 8
+    "total_failures": 7
   },
   "section_4_retrieval_comparison": {
     "description": "BM25 keyword baseline vs FastEmbed dense retrieval comparison.",
-    "bm25_hit_at_1": "66.7%",
-    "dense_hit_at_1": "80.0%",
-    "bm25_hit_at_5": "86.7%",
-    "dense_hit_at_5": "90.0%",
+    "bm25_hit_at_1": "73.3%",
+    "dense_hit_at_1": "86.7%",
+    "bm25_hit_at_5": "93.3%",
+    "dense_hit_at_5": "96.7%",
     "dense_wins": 5,
     "bm25_wins": 1,
-    "both_win": 19,
-    "neither_wins": 5
+    "both_win": 21,
+    "neither_wins": 3
   },
   "section_5_error_distribution": {
     "description": "Distribution of failure types across all evaluated questions.",
     "distribution": {
-      "Correct": 27,
+      "Correct": 28,
       "Semantic Mismatch": 3,
-      "Retrieval Failure": 3,
-      "Refusal Failure": 2
+      "Refusal Failure": 3,
+      "Retrieval Failure": 1
     }
   }
 }
